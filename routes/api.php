@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 // TODO @laravel-test
 
-Route::group(['middleware' => ['premium.access', 'auth:api', 'throttle:60,1']], function () {
+Route::group(['middleware' => ['premium.access', 'client', 'throttle:60,1']], function () {
     Route::get('calculator/add', 'CalculatorController@add');
     Route::get('calculator/sub', 'CalculatorController@sub');
     Route::get('calculator/div', 'CalculatorController@div');
